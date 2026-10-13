@@ -1,0 +1,83 @@
+
+/* Kewirausahaan lesson UI. Same visual conventions as Pengolahan Sinyal; scoped to this subject. */
+html[data-theme=light]{--diagram-card:#f6f7fc;--diagram-stroke:#dce3f1;--diagram-accent:#5b57dc}
+html[data-theme=dark]{--diagram-card:#243249;--diagram-stroke:#50617d;--diagram-accent:#aaa5ff}
+body.kewirausahaan-lesson{background:var(--bg);color:var(--ink)}
+.kewirausahaan-lesson .shell{max-width:1600px;grid-template-columns:252px minmax(0,1fr)}
+.kewirausahaan-lesson .rail{padding:22px 13px;background:#fff;border-right:1px solid #e9edf4;color:#26314b;z-index:12}
+.kewirausahaan-lesson .portal-brand{display:flex;align-items:center;gap:11px;padding:3px 9px 20px;margin-bottom:10px;border-bottom:1px solid #e9edf4}
+.kewirausahaan-lesson .identity-symbol{display:grid;place-items:center;flex-shrink:0;height:41px;width:41px;background:#575de5;color:white;font-size:21px;font-weight:800;border-radius:12px}
+.kewirausahaan-lesson .portal-brand strong{font-size:14px;display:block;line-height:1.3;color:#26314b}
+.kewirausahaan-lesson .portal-brand small{font-size:11px;color:#8a95a8}
+.kewirausahaan-lesson .portal-theme-placement{margin:12px 8px;display:flex}
+.kewirausahaan-lesson .theme-toggle{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:#fff;color:#23365b;border:1px solid #dce2ef;border-radius:12px;font-size:12px;font-weight:800;padding:10px 12px;min-height:42px}
+.kewirausahaan-lesson .theme-toggle .theme-icon{font-size:16px}
+.kewirausahaan-lesson .portal-home{display:block;background:#f6f7fb;border:1px solid #eaecf4;padding:10px 12px;font-size:12px;color:#4e5c7b;text-decoration:none;border-radius:12px;margin:8px 0;font-weight:700}
+.kewirausahaan-lesson .portal-label{margin:24px 10px 8px;color:#98a3b8;font-size:10px;letter-spacing:.12em;font-weight:850}
+.kewirausahaan-lesson .portal-nav{display:block}
+.kewirausahaan-lesson .portal-nav a{display:flex;align-items:flex-start;gap:12px;color:#5b6682!important;text-decoration:none;font-size:12px;line-height:1.55;border-radius:9px;margin:2px 0;padding:10px 8px;background:transparent}
+.kewirausahaan-lesson .portal-nav a:hover,.kewirausahaan-lesson .portal-nav a.active{color:#fff!important;background:#2e406b!important}
+.kewirausahaan-lesson .portal-nav a .n{color:#8278ca;border:0;background:transparent;padding:0;font-size:10px;min-width:22px;font-weight:850;margin-top:2px}
+.kewirausahaan-lesson .portal-nav a.active .n,.kewirausahaan-lesson .portal-nav a:hover .n{color:#bfc6ff}
+.kewirausahaan-lesson .portal-foot{margin-top:27px;border-top:1px solid #e8ecf5;padding:21px 8px 8px;font-size:11px;color:#8e9ab1}
+.kewirausahaan-lesson .portal-foot strong{color:#334673;font-size:11px}
+.kewirausahaan-lesson .portal-mobile-nav{display:none}
+.kewirausahaan-lesson .main{padding:26px clamp(20px,3.8vw,55px) 70px}
+.kewirausahaan-lesson .site-breadcrumb{display:flex;align-items:center;gap:9px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin:2px 0 15px}
+.kewirausahaan-lesson .site-breadcrumb a{color:var(--primarydeep);font-weight:700;text-decoration:none}
+.kewirausahaan-lesson .breadcrumb-actions{margin-left:auto}
+.kewirausahaan-lesson .print-link{border:1px solid var(--hair);border-radius:10px;background:var(--surface);color:var(--ink);font-size:12px;padding:8px 12px}
+.kewirausahaan-lesson .hero{background:#fff;color:#1e2b43;border:1px solid #e7eaf3;border-radius:18px;min-height:200px;padding:clamp(22px,3vw,36px);grid-template-columns:minmax(0,1fr) 240px;box-shadow:0 4px 24px #222a5305;gap:24px}
+.kewirausahaan-lesson .hero:before{display:none}
+.kewirausahaan-lesson .kicker{display:block;color:#6667cb;font-size:10px;font-weight:900;letter-spacing:.12em}
+.kewirausahaan-lesson .hero h1{color:#1e2b43;font-size:clamp(27px,2.8vw,39px);margin:12px 0 12px;line-height:1.17}
+.kewirausahaan-lesson .hero p{color:#65738b;font-size:13px;line-height:1.8}
+.kewirausahaan-lesson .instructor{background:#f7f8fc;border:1px solid #ebedf5;color:#273450;border-radius:14px;padding:19px;gap:7px}
+.kewirausahaan-lesson .hero-logo{display:grid;place-items:center;width:40px;height:40px;background:#e8eaff;border-radius:12px;color:#5d5cdb;font-size:23px}
+.kewirausahaan-lesson .instructor small{color:#8590a4;font-size:11px}
+.kewirausahaan-lesson .instructor strong{font-size:15px;line-height:1.5;color:#293858}
+.kewirausahaan-lesson .insight-card{padding:22px 19px}
+.kewirausahaan-lesson .concept-scroll{overflow-x:auto;max-width:100%;border-radius:12px;padding:5px}
+.kewirausahaan-lesson .concept-flow{min-width:730px;max-width:900px;width:100%;display:block}
+.kewirausahaan-lesson .figure-caption{border-top:1px solid var(--hair);margin-top:9px;padding-top:10px;font-size:11px;color:var(--muted)}
+.kewirausahaan-lesson .video-layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(220px,.75fr);align-items:center;gap:20px}
+.kewirausahaan-lesson .video-frame{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#101b2c;border:1px solid var(--hair)}
+.kewirausahaan-lesson .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.kewirausahaan-lesson .video-explain h3{line-height:1.35}
+.kewirausahaan-lesson a:focus-visible,.kewirausahaan-lesson button:focus-visible{outline:3px solid #9394f5;outline-offset:2px}
+/* Dark mode: same palette as existing lesson design and contrasted content/cards/charts. */
+html[data-theme=dark] body.kewirausahaan-lesson{--bg:#111722;--surface:#1b2535;--ink:#e6edfa;--muted:#b4c2d8;--hair:#35445d;--primary:#aaa0ff;--primarydeep:#c2baff;--lav:#2c3050;--hero:#252f4e;--nav:#172132;--alt:#253247;--green:#72e8c1;--danger:#ffa9bb}
+html[data-theme=dark] .kewirausahaan-lesson .rail{background:#192434;border-right-color:#334159;color:#e8eefc}
+html[data-theme=dark] .kewirausahaan-lesson .portal-brand{border-color:#37445c}
+html[data-theme=dark] .kewirausahaan-lesson .portal-brand strong{color:#eef3ff}
+html[data-theme=dark] .kewirausahaan-lesson .portal-brand small,html[data-theme=dark] .kewirausahaan-lesson .portal-foot{color:#9aadc9}
+html[data-theme=dark] .kewirausahaan-lesson .portal-label{color:#c0cbed}
+html[data-theme=dark] .kewirausahaan-lesson .portal-home{background:#f0f3fc;color:#3b5176;border-color:#a6b5d4}
+html[data-theme=dark] .kewirausahaan-lesson .portal-home:hover{background:#344667;color:#fff}
+html[data-theme=dark] .kewirausahaan-lesson .portal-nav a{color:#c0cee7!important}
+html[data-theme=dark] .kewirausahaan-lesson .portal-nav a.active,html[data-theme=dark] .kewirausahaan-lesson .portal-nav a:hover{background:#33425f!important;color:#f6f8ff!important}
+html[data-theme=dark] .kewirausahaan-lesson .portal-nav a .n{color:#b9bbff}
+html[data-theme=dark] .kewirausahaan-lesson .portal-foot{border-color:#38465c}
+html[data-theme=dark] .kewirausahaan-lesson .portal-foot strong{color:#d3dffa}
+html[data-theme=dark] .kewirausahaan-lesson .theme-toggle{background:#293a55;color:#edf3ff;border-color:#4b5d7b}
+html[data-theme=dark] .kewirausahaan-lesson .hero{background:linear-gradient(115deg,#222c4a,#25345a);border-color:#364563;color:#f0f5ff;box-shadow:none}
+html[data-theme=dark] .kewirausahaan-lesson .hero h1,html[data-theme=dark] .kewirausahaan-lesson .instructor strong{color:#f0f5ff}
+html[data-theme=dark] .kewirausahaan-lesson .hero p{color:#d1dff4}
+html[data-theme=dark] .kewirausahaan-lesson .kicker{color:#c5c2ff}
+html[data-theme=dark] .kewirausahaan-lesson .instructor{background:#ffffff0b;border-color:#526286;color:#eef3ff}
+html[data-theme=dark] .kewirausahaan-lesson .instructor small{color:#c1cee3}
+html[data-theme=dark] .kewirausahaan-lesson .card,html[data-theme=dark] .kewirausahaan-lesson .interact,html[data-theme=dark] .kewirausahaan-lesson .worked,html[data-theme=dark] .kewirausahaan-lesson .quiz{background:var(--surface);color:var(--ink);border-color:var(--hair)}
+html[data-theme=dark] .kewirausahaan-lesson .card p,html[data-theme=dark] .kewirausahaan-lesson .worked p,html[data-theme=dark] .kewirausahaan-lesson .quiz label{color:#e1ebfc}
+html[data-theme=dark] .kewirausahaan-lesson .mini-note,html[data-theme=dark] .kewirausahaan-lesson .formula,html[data-theme=dark] .kewirausahaan-lesson .feedback,html[data-theme=dark] .kewirausahaan-lesson .agenda,html[data-theme=dark] .kewirausahaan-lesson .task-strip{background:#26364c;color:#e4ebfb;border-color:#475a74}
+html[data-theme=dark] .kewirausahaan-lesson .stepflow span,html[data-theme=dark] .kewirausahaan-lesson .metric,html[data-theme=dark] .kewirausahaan-lesson .lesson-next a{background:#253247;color:#ecf2ff;border-color:#40516a}
+html[data-theme=dark] .kewirausahaan-lesson .metric b,html[data-theme=dark] .kewirausahaan-lesson .sectionhead .num{color:#c6bcff}
+html[data-theme=dark] .kewirausahaan-lesson .field input,html[data-theme=dark] .kewirausahaan-lesson .field select,html[data-theme=dark] .kewirausahaan-lesson input[type=number]{background:#162338;color:#eff4fe;border-color:#4b6080}
+html[data-theme=dark] .kewirausahaan-lesson .quiz label:hover{background:#293852}
+html[data-theme=dark] .kewirausahaan-lesson .simple-table th{background:#2a374d;color:#dce7f7}
+html[data-theme=dark] .kewirausahaan-lesson .simple-table td{color:#dae4f4}
+html[data-theme=dark] .kewirausahaan-lesson .graph,html[data-theme=dark] .kewirausahaan-lesson .bep-chart{background:#f8fbff;color:#26354c;border:1px solid #d1dbea;border-radius:12px}
+html[data-theme=dark] .kewirausahaan-lesson .graph text,html[data-theme=dark] .kewirausahaan-lesson .bep-chart text{fill:#28394e}
+html[data-theme=dark] .kewirausahaan-lesson .source-mini,html[data-theme=dark] .kewirausahaan-lesson .figure-caption{color:#b5c4db}
+@media(max-width:1100px){.kewirausahaan-lesson .shell{grid-template-columns:1fr}.kewirausahaan-lesson .rail{position:sticky;top:0;height:auto;display:flex;align-items:center;justify-content:space-between;overflow:visible;padding:10px 17px;gap:10px;background:#fff}.kewirausahaan-lesson .portal-brand{border:0;margin:0;padding:0}.kewirausahaan-lesson .portal-theme-placement{margin:0 4px 0 auto}.kewirausahaan-lesson .portal-theme-placement .theme-toggle{min-width:95px}.kewirausahaan-lesson .portal-desktop-nav{display:none}.kewirausahaan-lesson .portal-mobile-nav{display:block;position:relative;max-width:50%}.kewirausahaan-lesson .portal-mobile-nav summary{list-style:none;cursor:pointer;border:1px solid #dce2ee;color:var(--ink);border-radius:10px;padding:9px 10px;background:var(--surface);font-weight:700;font-size:12px}.kewirausahaan-lesson .portal-mobile-nav[open] .portal-nav{position:absolute;right:0;top:44px;width:min(330px,85vw);max-height:70vh;overflow:auto;background:var(--surface);border:1px solid var(--hair);box-shadow:0 17px 32px #101a2d33;padding:11px;border-radius:12px}.kewirausahaan-lesson .portal-mobile-nav .portal-nav a{color:var(--ink)!important}.kewirausahaan-lesson .section{scroll-margin-top:85px}html[data-theme=dark] .kewirausahaan-lesson .rail{background:#192434}html[data-theme=dark] .kewirausahaan-lesson .portal-mobile-nav summary{background:#293850;color:#eaf0ff;border-color:#4a5c77}}
+@media(max-width:750px){.kewirausahaan-lesson .hero{grid-template-columns:1fr;gap:14px;min-height:0}.kewirausahaan-lesson .instructor{padding:14px}.kewirausahaan-lesson .main{padding:20px 16px 60px}.kewirausahaan-lesson .video-layout{grid-template-columns:1fr}.kewirausahaan-lesson .portal-brand small{display:none}.kewirausahaan-lesson .identity-symbol{height:35px;width:35px}.kewirausahaan-lesson .portal-theme-placement .theme-toggle{min-width:75px;font-size:11px}}
+@media print{.kewirausahaan-lesson .rail,.kewirausahaan-lesson .breadcrumb-actions,.kewirausahaan-lesson .video-section{display:none!important}.kewirausahaan-lesson .hero{background:#fff;color:#182843;border:1px solid #ccc}.kewirausahaan-lesson .hero h1{color:#182843}.kewirausahaan-lesson .hero p{color:#54637c}}

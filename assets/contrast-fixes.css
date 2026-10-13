@@ -1,0 +1,16 @@
+
+/* Dark-mode contrast refinements. Shared across all subjects (including Kewirausahaan). */
+html[data-theme=dark] :is(.plot-wrap,.svgchart,.plot,.widechart,.diagram,.graph-paper,.graph-surface){background-color:#f8fbff!important;border-color:#cfd9e8!important}
+html[data-theme=dark] :is(.plot-wrap,.svgchart,.plot,.widechart,.diagram,.graph-paper,.graph-surface) :is(text,tspan){fill:#24324b;filter:none}
+html[data-theme=dark] :is(.plot-wrap,.svgchart,.plot,.widechart,.diagram,.graph-paper,.graph-surface) :is(.gridline,.axis-grid){stroke:#d3dce9}
+html[data-theme=dark] :is(.plot-wrap,.svgchart,.plot,.widechart,.diagram,.graph-paper,.graph-surface) :is(.axis,.tick){stroke:#657691}
+html[data-theme=dark] :is(.feedback,.callout,.note,.formula,.worked .answer,.exercise .answer,.quiz-result,.mini-note,.task-strip){color:#e4edff!important;border-color:#445773!important}
+html[data-theme=dark] :is(.card,.worked,.exercise,.quiz,.metric,.stat) :is(p,li,td,small){color:#d5e1f5}
+html[data-theme=dark] :is(.card,.worked,.exercise,.quiz,.metric,.stat) :is(h2,h3,h4,strong){color:#eff5ff}
+html[data-theme=dark] :is(input,select,textarea){color:#eff5ff;background-color:#19273a;border-color:#4a5e7b}
+html[data-theme=dark] ::placeholder{color:#a8b7cf;opacity:1}
+html[data-theme=dark] :is(.quiz label,.quiz-item label){color:#e5ecfa}
+html[data-theme=dark] :is(.values,.matcode,.code){color:#f1f5ff!important;background:#202d42!important}
+html[data-theme=dark] :is(.clean-course-bottom,.clean-english,.clean-module-type,.source-mini){color:#aebed7!important}
+/* Leave new conceptual graphics dark-friendly rather than forcing pale fills. */
+html[data-theme=dark] .concept-flow text{filter:none}
