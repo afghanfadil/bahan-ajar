@@ -8,3 +8,44 @@
 .brand-symbol{display:grid;place-items:center;flex:0 0 42px;height:42px;border-radius:13px;background:#eeeaff;color:#6247e9;font-weight:900;font-size:24px}.formula{overflow-x:auto;font-weight:600}.section-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:23px 0 2px;padding:7px;border:1px solid var(--hair);background:var(--surface);border-radius:15px}.section-tabs button{border:0;border-radius:10px;padding:10px 18px;background:transparent;color:var(--muted);font-weight:750;font-size:13px;flex:1}.section-tabs button[aria-selected=true]{background:#6247e9;color:white}.tab-panel[hidden]{display:none}.chart{margin-top:17px}.chart svg{width:100%;height:auto;max-height:350px;display:block;border-radius:14px;background:var(--alt);border:1px solid var(--hair)}.chart text{fill:var(--ink);font:12px system-ui}.chart .axis{stroke:var(--muted)}.chart .grid{stroke:var(--hair)}.chart .line{stroke:var(--primary);fill:none;stroke-width:3}.chart .label{font-weight:800}.chart-caption{font-size:12px;color:var(--muted);margin-top:8px}.error{border-color:var(--danger)!important;color:var(--danger)!important}.field input:focus,.field select:focus,button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #9180eb;outline-offset:3px}.video-player[hidden]{display:none!important}.video-player{display:block;width:100%;max-height:560px;border-radius:16px;background:#111d38;margin:12px 0}.video-file{display:block;width:100%;padding:14px;border:1px dashed var(--hair);border-radius:12px;margin-top:12px;font-size:13px}.video-extra{margin-top:18px}.media-slot iframe{aspect-ratio:16/9;width:100%;border:0;border-radius:14px;margin-top:14px}.sim-results:empty{display:none}.metric-grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.simtable{overflow:auto;margin-top:17px}.simtable table{border-collapse:collapse;font-size:12px;width:100%}.simtable td,.simtable th{padding:10px;border-bottom:1px solid var(--hair);text-align:left;white-space:nowrap}.simtable th{color:var(--muted);background:var(--alt)}.quiz-result{font-weight:700}.task-solution{margin-top:12px}.rail-link.active{border:1px solid #6e67b4}.rail-foot{line-height:1.7}.lecture-meta{font-size:12px;color:#c7d5ed}.section .num{white-space:nowrap}.print-note{display:none}.done-btn.isdone{color:var(--green);border-color:var(--green)}.video-caption-list li{margin:10px 0}.js .nojs{display:none}
 @media(max-width:760px){.formula{font-size:15px}.section-tabs button{padding:9px 10px;min-width:100px;flex-basis:40%}.hero h1{font-size:28px}.topbar .toolbar{gap:6px}.toolbtn{padding:7px 9px}.metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.metric b{font-size:18px}.main{padding-bottom:45px}.sectionhead .num{font-size:10px}.chart text{font-size:13px}.mobile-menu .flyout{width:min(350px,88vw)}}
 @media print{html[data-theme=dark]{--bg:#fff;--surface:#fff;--ink:#17223a;--muted:#444;--hair:#bbb;--lav:#f2f0fc;--alt:#fff}.tab-panel[hidden]{display:block!important}.section-tabs,#panel-video,.sim-controls,.done-btn,.sim-reset{display:none!important}.hero{display:block;min-height:0;padding:20px}.hero h1{font-size:28px}.hero .eyebrow,.hero p,.hero-tags span,.lecturer small,.lecture-meta{color:#17223a}.lecturer{display:none}.section{break-inside:auto;margin-top:22px}.chart{break-inside:avoid}.sectionhead{break-after:avoid}.cols{display:block}.card{margin-bottom:10px;break-inside:avoid}.print-note{display:block}.explanation{display:block}.worked .solution{display:block}.formula{white-space:normal;overflow:visible}.footer{font-size:9px}.quiz{break-inside:avoid}}
+
+/* Sidebar mengikuti HTML acuan pertemuan-10 Fisika; cakupan hanya navigasi. */
+.shell{grid-template-columns:252px minmax(0,1fr)}
+.rail{padding:26px 18px;background:linear-gradient(176deg,#182440,#121d33);color:#e9effb;border:0;z-index:20}
+.rail .brand{display:flex;align-items:center;gap:11px;padding:5px 2px 23px;border-bottom:1px solid #33415b;color:#e9effb}
+.rail .brand-symbol{width:44px;height:44px;flex-basis:44px;border-radius:13px;background:#ece9ff;color:#6652dd;font-size:23px;font-weight:800}
+.rail .brand b{font-size:18px;line-height:1.55}
+.rail .brand small{font-size:11px;display:block;color:#b9c9e2;margin-top:5px;white-space:normal}
+.rail-tools{margin:18px 0 12px}
+.rail-theme{background:#ffffff12;color:#fff;border:1px solid #4b5a7b;border-radius:10px;padding:8px 12px;font-size:12px;width:100%;text-align:left;min-height:44px;cursor:pointer;font-weight:400;line-height:1.55}
+.rail-theme:hover{background:#283b60;border-color:#a89ded}
+.utility-links .rail-link{display:block;color:#cedaf0;text-decoration:none;font-size:13px;padding:11px 9px;border-radius:9px;background:transparent;border:0;margin:0;line-height:1.55;font-weight:400}
+.utility-links .rail-link:hover{background:#2b3b60;color:#fff}
+.rail .rail-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#96abcd;margin:23px 8px 10px;font-weight:400}
+.rail .topic-links{display:grid;gap:4px}
+.rail .topic-links .rail-link,.rail .flyout .rail-link{display:flex;gap:11px;align-items:center;border-radius:10px;padding:10px;color:#dce5f6;font-size:12px;text-decoration:none;line-height:1.5;margin:0;border:0;font-weight:400}
+.rail .rail-link .n{font-size:10px;color:#a89ded;min-width:17px;flex:0 0 17px;border:0;padding:0;text-align:left;font-weight:400}
+.rail .topic-links .rail-link:hover,.rail .topic-links .rail-link.active,.rail .flyout .rail-link:hover,.rail .flyout .rail-link.active{background:#354370;color:#fff;border:0}
+.rail .rail-foot{font-size:11px;line-height:1.7;color:#9fb2d2;border-top:1px solid #33415b;margin-top:25px;padding:18px 8px}
+.rail .rail-foot b{font-size:12px;color:#dce6f9}
+.breadcrumb{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:12px;font-weight:700;line-height:1.6}
+.breadcrumb a{color:var(--primarydeep);text-decoration:none}
+.breadcrumb .separator{font-weight:400;color:var(--muted)}
+.breadcrumb [aria-current]{color:var(--ink)}
+@media(max-width:1100px){
+ .shell{grid-template-columns:1fr}
+ .rail{padding:10px 16px;gap:10px}
+ .rail .brand{border:0;padding:0;flex:1;min-width:0}
+ .rail .brand b{font-size:15px}
+ .rail .brand small{display:none}
+ .rail .brand-symbol{width:36px;height:36px;flex-basis:36px;border-radius:11px;font-size:21px}
+ .rail-tools{margin:0}
+ .rail-theme{width:35px;height:35px;min-height:35px;padding:0;text-align:center;font-size:0}
+ .rail-theme:before{content:'◐';font-size:19px}
+ .rail .utility-links,.rail .topic-links{display:none}
+ .rail .mobile-menu summary{color:#fff;border-color:#52618c;background:transparent}
+ .rail .flyout{background:#182440;border:1px solid #33415b;box-shadow:0 12px 36px #14233a40}
+ .rail .flyout .rail-label{display:block;margin:16px 8px 8px}
+ .rail .flyout .rail-link{font-size:12px;padding:9px 8px}
+ .breadcrumb{font-size:11px;gap:7px}
+}

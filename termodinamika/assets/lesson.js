@@ -48,3 +48,26 @@ function compute(){try{
  }catch(err){$('#sim-status').textContent=err.message;$('#sim-status').className='feedback error';$('#sim-metrics').replaceChildren();$('#sim-chart').replaceChildren();$('#sim-table').replaceChildren()}}
 form.addEventListener('submit',ev=>ev.preventDefault());form.addEventListener('input',compute);form.addEventListener('change',compute);form.addEventListener('reset',()=>setTimeout(compute,0));$('#set-saturation')?.addEventListener('click',()=>{const r=window.STEAM_DATA.find(r=>r.t===Number(form.elements.temp.value));form.elements.p.value=r.p;compute()});compute();
 })();
+
+// Keep the sidebar highlight aligned with the visible lesson section.
+(function(){
+ const links=[...document.querySelectorAll('.rail a.rail-link[href^="#"]')];
+ if(!links.length)return;
+ const targets=[...new Set(links.map(a=>a.hash.slice(1)))].map(id=>document.getElementById(id)).filter(Boolean);
+ let pending=false;
+ function update(){
+  pending=false;
+  const visible=targets.filter(el=>!el.closest('[hidden]')&&el.getClientRects().length);
+  if(!visible.length)return;
+  const threshold=innerWidth<=1100?100:100;
+  let current=visible[0];
+  for(const el of visible){if(el.getBoundingClientRect().top<=threshold)current=el;else break;}
+  links.forEach(a=>{const active=a.hash==='#'+current.id;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
+ }
+ function schedule(){if(!pending){pending=true;requestAnimationFrame(update);}}
+ window.addEventListener('scroll',schedule,{passive:true});
+ window.addEventListener('resize',schedule);
+ window.addEventListener('hashchange',schedule);
+ document.querySelectorAll('.tab-panel').forEach(panel=>new MutationObserver(schedule).observe(panel,{attributes:true,attributeFilter:['hidden']}));
+ schedule();
+})();
